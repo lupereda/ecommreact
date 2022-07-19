@@ -1,6 +1,7 @@
 import './navbar.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+
 function Navbar() {
     return (
         <div>
@@ -8,7 +9,7 @@ function Navbar() {
                 <img src="" alt="menu" className="menu" />
 
                 <div className="navbar-left">
-                    <img src="" alt="logo" className="logo" />
+                    <img src='assets/icons/images/Pistacho (1).png' alt="logo" className="logo" />
 
                     <ul>
                         <li>
@@ -36,7 +37,7 @@ function Navbar() {
                     <ul>
                         <input type='search' className='global-search' placeholder=' Buscar'></input>
                         <li className="navbar-shopping-cart">
-                            <ShoppingCartIcon></ShoppingCartIcon>
+                            <ShoppingCartIcon style={{color:'white'}}></ShoppingCartIcon>
                             <div>2</div>
                         </li>
                     </ul>
