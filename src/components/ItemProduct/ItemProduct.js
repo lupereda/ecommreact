@@ -11,6 +11,7 @@ const ItemProduct = ({title,price,image,stock,action}) =>{
         setContador(contador + 1)
     }
     const restNumber = () =>{
+        if(contador>0)
         setContador(contador - 1)
     }
     useEffect(()=>{
