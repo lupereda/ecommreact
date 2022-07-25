@@ -1,0 +1,38 @@
+const products = [
+    {
+        id:1,
+        title:'Bananas',
+        price:150,
+        image:'banabas.jpg',
+        stock:10
+    },
+    {
+        id:2,
+        title:'Uvas',
+        price:300,
+        image:'uvas.jpg',
+        stock:3
+    },
+    {
+        id:3,
+        title:'Manzanas',
+        price:420,
+        image:'manzanas.jpg',
+        stock:5
+    },
+    {
+        id:4,
+        title:'Peras',
+        price:350,
+        image:'peras.jpg',
+        stock:3
+    },
+    {
+        id:5,
+        title:'Bananas',
+        price:150,
+        image:'banabas.jpg',
+        stock:10
+    }
+]
+export default products;

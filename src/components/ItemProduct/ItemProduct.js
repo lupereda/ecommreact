@@ -1,11 +1,14 @@
 
 import  './ItemProduct.css'
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
 
-const ItemProduct = ({title,price,image,stock,action}) =>{
+const ItemProduct = ({data}) =>{
+
     const [contador, setContador] = useState(0)
-   
+
+    const {title, image , price , stock} = data
+
     const addNumber = () =>{
         if(contador<stock)
         setContador(contador + 1)
@@ -14,12 +17,7 @@ const ItemProduct = ({title,price,image,stock,action}) =>{
         if(contador>0)
         setContador(contador - 1)
     }
-    useEffect(()=>{
-        // fetch().then(
-            // setProduct()
-        // )
- 
-     },[contador])
+   
     return (
         <div className="product-card">
                 <img src={`/assets/icons/images/${image}`}  alt=""  />

@@ -1,15 +1,20 @@
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 36px;
+    width: 95%
+}
 .products-container{
     display: grid;
         grid-template-columns: repeat(auto-fill, 240px);
         gap: 26px;
-        place-content: center;
+        place-content: space-between
 }
 .titulo-container{
     color: white;
     font-weight: bold;
-    font-size: 24px;
-    margin-left: 36px;
-
+    font-size: 24px
   }
   
