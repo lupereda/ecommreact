@@ -2,6 +2,7 @@ import './ItemProductContainer.css'
 import { useEffect, useState } from 'react'
 import products from '../../utils/products.mock'
 import ItemList from '../ItemList/ItemList'
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 
@@ -34,6 +35,7 @@ useEffect (()=>{
         </h1>
          <div className='products-container'>
              <ItemList dataProducts={listProducts}/>
+             <ItemDetail data={listProducts}/>
       </div>
     </div>
     )

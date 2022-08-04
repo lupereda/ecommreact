@@ -32,7 +32,7 @@ const ItemProduct = ({data,action}) =>{
                     <p>{contador}</p>
                     <button onClick={addNumber}>+</button>
                 </div>              
-                 <button>Anadir al carrito</button>
+                 <button>Añadir al carrito</button>
         </div>
     )
 }
