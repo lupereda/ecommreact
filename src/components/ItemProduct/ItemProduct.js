@@ -1,13 +1,14 @@
 
 import  './ItemProduct.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
-const ItemProduct = ({data}) =>{
+const ItemProduct = ({data,action}) =>{
 
-    const [contador, setContador] = useState(0)
+    const [contador, setContador] = useState(1)
 
-    const {title, image , price , stock} = data
+    const {title, image , price , stock,id} = data
 
     const addNumber = () =>{
         if(contador<stock)
@@ -20,6 +21,7 @@ const ItemProduct = ({data}) =>{
    
     return (
         <div className="product-card">
+                <Link to={`/productos/${id}`}></Link>
                 <img src={`/assets/icons/images/${image}`}  alt=""  />
                 <div className='product-info'>
                 <p>{title}</p>
@@ -30,7 +32,7 @@ const ItemProduct = ({data}) =>{
                     <p>{contador}</p>
                     <button onClick={addNumber}>+</button>
                 </div>              
-                 <button>Comprar</button>
+                 <button>Anadir al carrito</button>
         </div>
     )
 }

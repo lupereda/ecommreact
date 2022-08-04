@@ -1,5 +1,6 @@
 import './navbar.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import{Link} from 'react-router-dom';
 
 
 function Navbar() {
@@ -7,32 +8,29 @@ function Navbar() {
         <div>
             <nav>
                 <img src="" alt="menu" className="menu" />
-
                 <div className="navbar-left">
                     <img src='assets/icons/images/Pistacho (1).png' alt="logo" className="logo" />
-
                     <ul>
                         <li>
-                            <a href="/">Frutas</a>
+                            <Link   to="/">Frutas</Link>
                         </li>
                         <li>
-                            <a href="/">Vegetales</a>
+                            <Link to="/">Vegetales</Link>
                         </li>
                         <li>
-                            <a href="/">Bolsones</a>
+                            <Link to="/">Bolsones</Link>
                         </li>
                         <li>
-                            <a href="/">Almacen</a>
+                            <Link to="/">Almacen</Link>
                         </li>
                         <li>
-                            <a href="/">Dietetica</a>
+                            <Link to="/">Dietetica</Link>
                         </li>
                         <li>
-                            <a href="/">Otros</a>
+                            <Link to="/contacto">Contacto</Link>
                         </li>
                     </ul>
                 </div>
-
                 <div className="navbar-right">
                     <ul>
                         <input type='search' className='global-search' placeholder=' Buscar'></input>

@@ -1,10 +1,15 @@
 import './ItemDetail.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({data}) =>{
-    const [image,title,price,stock,description]= data
+    const [image,title,price,description]= data
+    const [quantitySelected, setQuantitySelected] = useState(0)
+
     return(
         <div>
-            <aside class="product-detail">
+            <div class="product-detail">
         <div class="product-detail-close">
             <img src="./Icons/icon_close.png"/>
         </div>
@@ -18,8 +23,9 @@ const ItemDetail = ({data}) =>{
                 Add to cart
             </button>
         </div>
-    </aside>
+    </div>
+    {quantitySelected> 0? <button><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected}/>}
         </div>
-    )
+        )
 }
 export default ItemDetail;
