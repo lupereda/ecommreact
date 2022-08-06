@@ -5,12 +5,13 @@ import Home from './pages/home';
 import Contact from './pages/contact';
 import Products from './pages/products';
 import checkout from './pages/checkout';
-
+import CartProvider from './context/CartContext';
 import DetalleProducto from './pages/detalleProducto';
 
 function App() {
   return (
-    <BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
         <Navbar/> 
         <Routes>
           <Route path="/" element={<Home></Home>}/>
@@ -21,6 +22,7 @@ function App() {
           <Route path='*' element={<h1>Error 404 - ruta not encontrada</h1>} />
         </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

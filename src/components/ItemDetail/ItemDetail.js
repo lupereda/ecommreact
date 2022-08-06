@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({data}) =>{
-    const [quantitySelected, setQuantitySelected] = useState(0)
+    const [quantitySelected, setQuantitySelected] = useState(0);
+
 
     return(
         <div>
             <div class="product-detail">
-                 <img src={`/../public/assets/icons/${data.image}`}/>
+                 <img src={`/assets/icons/images/${data.image}`}/>
                  <div class="product-info">
                     <p>${data.price}</p>
                      <p>{data.title}</p>

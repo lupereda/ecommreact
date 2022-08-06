@@ -21,7 +21,7 @@ const ItemProduct = ({data,action}) =>{
    
     return (
         <div className="product-card">
-                <Link to={`/productos/${id}`}></Link>
+                <Link to={`/productos/${id}`}>
                 <img src={`/assets/icons/images/${image}`}  alt=""  />
                 <div className='product-info'>
                 <p>{title}</p>
@@ -32,7 +32,8 @@ const ItemProduct = ({data,action}) =>{
                     <p>{contador}</p>
                     <button onClick={addNumber}>+</button>
                 </div>              
-                 <button>Añadir al carrito</button>
+                 <button>Añadir al carrito</button> 
+                </Link>
         </div>
     )
 }

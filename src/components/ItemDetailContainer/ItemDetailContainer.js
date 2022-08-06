@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
 
     const filterById = () => {
         products.some( (product) => {
-            if(product.id === id) {
+            if(product.id == id) {
                 setProductData(product) 
             }
         }

@@ -1,4 +1,6 @@
 import ItemProduct from "../ItemProduct/ItemProduct"
+import { useContext } from "react";
+import {CartContext} from "../ItemProduct/ItemProduct";
 
 const ItemList = ({dataProducts}) => {
     return(
