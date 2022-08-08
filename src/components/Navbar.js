@@ -9,7 +9,7 @@ function Navbar() {
             <nav>
                 <img src="" alt="menu" className="menu" />
                 <div className="navbar-left">
-                    <img src='assets/icons/images/Pistacho (1).png' alt="logo" className="logo" />
+                    <img src='/assets/icons/images/Pistacho.png' alt="logo" className="logo" />
                     <ul>
                         <li>
                             <Link   to="/">Frutas</Link>

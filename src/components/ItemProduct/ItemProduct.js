@@ -32,8 +32,10 @@ const ItemProduct = ({data,action}) =>{
                     <button onClick={restNumber}>-</button>
                     <p>{contador}</p>
                     <button onClick={addNumber}>+</button>
-                </div>              
+                </div> 
+                <Link to={`/cart`}>             
                  <button>Añadir al carrito</button> 
+                </Link>
         </div>
     )
 }

@@ -8,20 +8,19 @@ const ItemDetail = ({data}) =>{
 
 
     return(
-        <div>
-            <div class="product-detail">
+        <div className='contenedor-detalle-poducto'>
+            <div className='detalle-producto'>
                  <img src={`/assets/icons/images/${data.image}`} alt=""/>
-                 <div class="product-info">
+                 <div className='product-infor'>
+                    <div className='der'>
+                    <p>{data.title}</p>
                     <p>${data.price}</p>
-                     <p>{data.title}</p>
+                    </div>
                     <p>{data.description}</p>
-                    <button class="primary-button add-to-cart-button">
-                    Anadir al carrito
-                    </button>
              </div>
          </div>
          {console.log("cantidadseleccionada",quantitySelected)}
-    {quantitySelected> 0? <button><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected}/>}
+    {quantitySelected> 0? <button className='terminar-button'><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected}/>}
         </div>
         )
 }
