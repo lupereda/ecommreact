@@ -27,13 +27,13 @@ const ItemProduct = ({data,action}) =>{
                 <p>{title}</p>
                 <span>${price}</span>
                 </div> 
+                </Link>
                 <div className='contador'>
                     <button onClick={restNumber}>-</button>
                     <p>{contador}</p>
                     <button onClick={addNumber}>+</button>
                 </div>              
                  <button>Añadir al carrito</button> 
-                </Link>
         </div>
     )
 }

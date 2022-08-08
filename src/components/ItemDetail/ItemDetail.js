@@ -10,17 +10,17 @@ const ItemDetail = ({data}) =>{
     return(
         <div>
             <div class="product-detail">
-                 <img src={`/assets/icons/images/${data.image}`}/>
+                 <img src={`/assets/icons/images/${data.image}`} alt=""/>
                  <div class="product-info">
                     <p>${data.price}</p>
                      <p>{data.title}</p>
                     <p>{data.description}</p>
                     <button class="primary-button add-to-cart-button">
-                    <img src=""/>
-                    Add to cart
+                    Anadir al carrito
                     </button>
              </div>
          </div>
+         {console.log("cantidadseleccionada",quantitySelected)}
     {quantitySelected> 0? <button><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected}/>}
         </div>
         )
