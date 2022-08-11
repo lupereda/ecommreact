@@ -1,6 +1,6 @@
 import './navbar.css'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import{Link} from 'react-router-dom';
+import CartWidget from './CartWIdget';
 
 
 function Navbar() {
@@ -35,8 +35,7 @@ function Navbar() {
                     <ul>
                         <input type='search' className='global-search' placeholder=' Buscar'></input>
                         <li className="navbar-shopping-cart">
-                            <ShoppingCartIcon style={{color:'white'}}></ShoppingCartIcon>
-                            <div>2</div>
+                           <CartWidget />
                         </li>
                     </ul>
                 </div>
