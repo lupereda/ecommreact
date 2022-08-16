@@ -20,7 +20,7 @@ const ItemDetail = ({data}) =>{
              </div>
          </div>
          {console.log("cantidadseleccionada",quantitySelected)}
-    {quantitySelected> 0? <button className='terminar-button'><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected}/>}
+    {quantitySelected> 0? <button className='terminar-button'><Link to="/cart">Terminar compra</Link></button> : <ItemCount setQuantitySelected={setQuantitySelected} productData={data}/>}
         </div>
         )
 }

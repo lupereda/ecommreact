@@ -4,8 +4,8 @@ import { useState,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
 
-const ItemProduct = ({data,action}) =>{
-    const { handleClick, name } = useContext(CartContext)
+const ItemProduct = ({data}) =>{
+    const { AddProductToCart } = useContext(CartContext)
 
 
     const [contador, setContador] = useState(1)
@@ -36,7 +36,7 @@ const ItemProduct = ({data,action}) =>{
                     <button onClick={addNumber}>+</button>
                 </div> 
                 <Link to={`/cart`}>             
-                 <button onClick={handleClick}>Añadir al carrito</button> 
+                 <button onClick={AddProductToCart}>Añadir al carrito</button> 
                 </Link>
         </div>
     )

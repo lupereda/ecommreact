@@ -38,10 +38,9 @@ const CartWidget = () => {
                 {cartProducts.map((product) => {
                     return(
                         <div className='item-cart-product' key={product.id}>
-                            <img src={`/assets/${product.image}`} alt="" />
+                            <img src={`/assets/icons/images/${product.image}`} alt="" />
                             <div className='cart-product__details'>
                                 <p>{product.title}</p>
-                                <p>TAMAÑO : XS</p>
                             </div>
                             <div className='cart-product__details'>
                                 <p>$ {product.price}</p>
