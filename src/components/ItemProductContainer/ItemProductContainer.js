@@ -1,29 +1,33 @@
 import './ItemProductContainer.css'
 import { useEffect, useState } from 'react'
-import products from '../../utils/products.mock'
 import ItemList from '../ItemList/ItemList'
+import db from '../../firebaseConfig'
+import {collection , getDocs } from 'firebase/firestore'
 
 
 
 function ItemProductContainer ({section}) {
   
-   const [listProducts,sentListProducts] = useState([])
+   const [listProducts,setListProducts] = useState([])
 
-    const getProducts= new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve(products)
-        },2000)
-   })
+  const getProducts = async ()=>{
+    const productCollection = collection(db, 'productos')
+    const productSnapshot =await getDocs(productCollection)
+    const productList = productSnapshot.docs.map((doc)=>{
+        let product = doc.data()
+        product.id=doc.id
+
+        return product
+    })
+    return productList
+  }
 useEffect (()=>{
-    getProducts
-        .then((res)=>{
-            console.log(res)
-            sentListProducts(res)
-        })
-        .catch((error)=>{
-    console.log(error)
-        })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    getProducts()
+     .then(
+        (res)=>{
+            setListProducts(res)
+        }
+     )
 },[])
  
 
